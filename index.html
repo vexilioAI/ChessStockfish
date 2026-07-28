@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chess Analyzer | Vasilije Dmitrović</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/www/css/chessboard-1.0.0.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chess.js@1.0.0-beta.8/dist/chess.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/www/js/chessboard-1.0.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<div class="logo">
+
+♟ Chess Analyzer
+
+</div>
+
+<div class="author">
+
+Designed & Developed by
+<strong>Vasilije Dmitrović</strong>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="left">
+
+<div id="board"></div>
+
+<div class="controls">
+
+<button id="startBtn">⏮</button>
+
+<button id="backBtn">◀</button>
+
+<button id="playBtn">▶</button>
+
+<button id="nextBtn">►</button>
+
+<button id="endBtn">⏭</button>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<h2>PGN Import</h2>
+
+<textarea
+id="pgnInput"
+placeholder="Paste PGN here..."></textarea>
+
+<button id="loadGame">
+
+Load Game
+
+</button>
+
+<hr>
+
+<h2>Engine</h2>
+
+<label>
+
+Depth
+
+</label>
+
+<input
+type="range"
+id="depth"
+min="8"
+max="30"
+value="18">
+
+<div id="depthValue">
+
+18
+
+</div>
+
+<button id="analyze">
+
+Analyze Position
+
+</button>
+
+<hr>
+
+<h2>Evaluation</h2>
+
+<div id="evaluation">
+
+Waiting...
+
+</div>
+
+<h2>Top 3 Variations</h2>
+
+<div id="pvContainer">
+
+<div class="pv">
+
+#1 Waiting...
+
+</div>
+
+<div class="pv">
+
+#2 Waiting...
+
+</div>
+
+<div class="pv">
+
+#3 Waiting...
+
+</div>
+
+</div>
+<h2>Move List</h2>
+
+<div id="moveList">
+
+No game loaded.
+
+</div>
+
+<hr>
+
+<div class="switches">
+
+<label class="toggle">
+
+<input
+type="checkbox"
+id="showArrows">
+
+<span>
+
+Show Engine Arrows
+
+</span>
+
+</label>
+
+<label class="toggle">
+
+<input
+type="checkbox"
+id="showPV"
+checked>
+
+<span>
+
+Show Top 3 Variations
+
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+
+Chess Analyzer
+
+</div>
+
+<div>
+
+Designed & Developed by
+<strong>Vasilije Dmitrović</strong>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
