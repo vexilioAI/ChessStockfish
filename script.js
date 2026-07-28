@@ -13,6 +13,9 @@ let moves = [];
 let currentMove = 0;
 
 let engine = null;
+engine = new Worker(
+"https://cdn.jsdelivr.net/npm/stockfish@16/src/stockfish.js"
+);
 
 let currentPGN = "";
 
@@ -994,9 +997,7 @@ loadGameButton.onclick = function(){
 };
 // ===============================
 // MAIN STOCKFISH HANDLER
-// ===============================
 
-engine.onmessage = function(event){
 
     const line = event.data;
 
